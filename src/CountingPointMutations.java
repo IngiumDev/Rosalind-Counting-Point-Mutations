@@ -6,14 +6,16 @@ public class CountingPointMutations {
     public static void main(String[] args) {
         String filename = "src/rosalind_hamm.txt";
         // Load DNA strings from file
-        String s = loadDNAStringFromFile(filename,1);
-        String t = loadDNAStringFromFile(filename,2);
+        String s = loadDNAStringFromFile(filename, 1);
+        String t = loadDNAStringFromFile(filename, 2);
         // Count point mutations
         System.out.println(countPointMutations(s, t)); // 490
     }
 
 
     /**
+     * Counts the number of point mutations between two DNA strings.
+     *
      * @param s the first DNA string
      * @param t the second DNA string
      * @return the number of point mutations between the two DNA strings (Hamming distance)
@@ -30,7 +32,9 @@ public class CountingPointMutations {
     }
 
     /**
-     * @param fileName the name of the file to load the DNA string from
+     * Loads a DNA string from a file based on the line number.
+     *
+     * @param fileName         the name of the file to load the DNA string from
      * @param lineNumberToLoad the line number of the file to load the DNA string from (Starts at 1)
      * @return the DNA string loaded from the file
      */
